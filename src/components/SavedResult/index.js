@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col } from "../Grid"
 
 const SavedResult = props => {
+    console.log("length is: " + props.savedBooks.length);
     return (props.savedBooks.length === 0) ? (
         <div className="card">
             <div className="card-body player">
