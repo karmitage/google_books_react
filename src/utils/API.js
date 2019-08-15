@@ -3,7 +3,9 @@ import axios from "axios";
 export default {
     //get book from google
     getGoogleSearchBooks: function (query) {
-        return axios.get("http://www.googleapis.com/books/v1/volumes?q=" + query)
+        let key = process.env.REACT_APP_API_KEY
+        return axios.get("https://www.googleapis.com/books/v1/volumes?key=" + key
+            + "&q=" + query)
     },
     // Gets all books
     getBooks: function () {
