@@ -5,7 +5,7 @@ export default {
     getGoogleSearchBooks: function (query) {
         let key = process.env.REACT_APP_API_KEY
         return axios.get("https://www.googleapis.com/books/v1/volumes?key=" + key
-            + "&q=" + query)
+            + "&q=" + query + "&maxResults=" + 5)
     },
     // Gets all books
     getBooks: function () {
