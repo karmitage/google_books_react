@@ -6,6 +6,11 @@ router.route("/")
     .get(booksController.findAll)
     .post(booksController.create);
 
+// router.route("/")
+//     .get(function (req, res) {
+//         res.send("hello");
+//     });
+
 // Matches with "/api/books/:id"
 router
     .route("/:id")
