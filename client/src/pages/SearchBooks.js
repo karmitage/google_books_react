@@ -62,8 +62,7 @@ class SearchBooks extends Component {
         savedBooks = savedBooks[0];
         console.log("saved books is: " + savedBooks[0]);
         API.saveBook(savedBooks)
-            // .then(this.setState({ message: alert("Your book is saved") }))
-            .then(console.log("finished"))
+            .then(this.setState({ message: alert("Your book is saved") }))
             .catch(err => console.log(err.response))
     }
     render() {
