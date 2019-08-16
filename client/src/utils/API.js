@@ -22,7 +22,8 @@ export default {
     // Saves a book to the database
     saveBook: function (savedBooks) {
         console.log("hi from inside the post");
-        console.log("here are the saved books" + savedBooks);
-        return axios.post("/api/books", savedBooks);
+        console.log("here are the saved books" + JSON.stringify(savedBooks));
+        savedBooks.author = savedBooks.author[0];
+        return axios.post("/api/books/", savedBooks);
     }
 };
